@@ -41,7 +41,7 @@ makeHtmlBoard() {
   // make column tops (clickable area for adding a piece to that column)
   const top = document.createElement('tr');
   top.setAttribute('id', 'column-top');
-  top.addEventListener("click", this.handleGameClick(this));
+  top.addEventListener("click", this.handleClick.bind(this));
 
   for (let x = 0; x < this.width; x++) {
     const headCell = document.createElement('td');
